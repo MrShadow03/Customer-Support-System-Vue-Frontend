@@ -2,8 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/LoginView.vue'
 import SignUpView from '../views/SignUpView.vue'
-import Dashboard from '@/views/Dashboard.vue'
-import Tickets from '@/views/Tickets.vue'
+import TicketsView from '@/views/TicketsView.vue'
+import ChatsView from '@/views/ChatsView.vue'
+import TicketView from '@/views/TicketView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,21 +27,21 @@ const router = createRouter({
       meta: { layout: 'AuthLayout' },
     },
     {
-      path: '/dashboard',
-      name: 'dashboard',
-      component: Dashboard,
+      path: '/tickets',
+      name: 'tickets',
+      component: TicketsView,
       meta: { layout: 'DashboardLayout' },
     },
     {
-      path: '/profile',
-      name: 'profile',
-      component: Tickets,
+      path: '/tickets/:id',
+      name: 'ticket.show',
+      component: TicketView,
       meta: { layout: 'DashboardLayout' },
     },
     {
-      path: '/settings',
-      name: 'settings',
-      component: Dashboard,
+      path: '/chats',
+      name: 'chats',
+      component: ChatsView,
       meta: { layout: 'DashboardLayout' },
     },
 
