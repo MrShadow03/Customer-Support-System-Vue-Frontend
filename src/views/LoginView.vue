@@ -1,9 +1,20 @@
 <script setup>
-    import logo from '@/assets/images/logo.jpg'
+    import { useAuthStore } from '@/stores/auth';
+    import { storeToRefs } from 'pinia';
+    import { reactive } from 'vue';
+    import logo from '@/assets/images/logo.jpg';
+
+    const { authenticate } = useAuthStore();
+    const { errors } = storeToRefs(useAuthStore());
+
+    const form = reactive({
+        email: '',
+        password: '',
+    });
 </script>
 <template>
     <!--begin::Form-->
-    <form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" action="#">
+    <form @submit.prevent="authenticate('login', form, 'submit-button')" class="form w-100" novalidate="novalidate" id="kt_sign_in_form" action="#">
         <!--begin::Heading-->
         <div class="text-center mb-11">
             <img class="w-150px mb-5" alt="Logo" :src="logo" style="width: 150px; aspect-ratio: 1; object-fit:contain">
@@ -16,33 +27,45 @@
         </div>
         <!--begin::Heading-->
     
-        <!--begin::Input group--->
-        <div class="fv-row mb-8">
+       <!--begin::Input group--->
+       <div class="fv-row mb-8">
             <!--begin::Email-->
-            <input type="text" placeholder="Email" name="email" autocomplete="off" class="form-control bg-transparent"/> 
+            <input v-model="form.email" type="text" placeholder="Email" name="email" autocomplete="off" class="form-control bg-transparent"/> 
             <!--end::Email-->
+
+            <!--begin::Error-->
+            <div v-if="errors.email" class="fv-plugins-message-container">
+                <div data-field="email" data-validator="notEmpty" class="fv-help-block">{{ errors.email[0] }}</div>
+            </div>
         </div>
     
         <!--end::Input group--->
-        <div class="fv-row mb-3">    
+        <div class="fv-row mb-8">    
             <!--begin::Password-->
-            <input type="password" placeholder="Password" name="password" autocomplete="off" class="form-control bg-transparent"/>
+            <input v-model="form.password" type="password" placeholder="Password" name="password" autocomplete="off" class="form-control bg-transparent"/>
             <!--end::Password-->
+
+            <!--begin::Error-->
+            <div v-if="errors.password" class="fv-plugins-message-container">
+                <div data-field="password" data-validator="notEmpty" class="fv-help-block">{{ errors.password[0] }}</div>
+            </div>
         </div>
-        <!--end::Input group--->  
+        <!--end::Input group--->
     
         <!--begin::Submit button-->
         <div class="d-grid mb-10 mt-10">
-            <button type="submit" id="kt_sign_in_submit" class="btn btn-primary">
+            <button type="submit" id="submit-button" class="btn btn-primary">
                 
                 <!--begin::Indicator label-->
                 <span class="indicator-label">
-                    Login</span>
+                    Login
+                </span>
                 <!--end::Indicator label-->
                 
                 <!--begin::Indicator progress-->
                 <span class="indicator-progress">
-                    Please wait...    <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+                    Please wait...
+                    <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
                 </span>
                 <!--end::Indicator progress-->
             </button>

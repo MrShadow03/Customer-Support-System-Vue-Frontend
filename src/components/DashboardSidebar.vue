@@ -1,3 +1,16 @@
+<script setup>
+import { useAuthStore } from '@/stores/auth';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
+
+const isActive = (name) => {
+    return route.name === name;
+};
+
+const authStore = useAuthStore();
+</script>
+
 <template>
     <div id="kt_app_sidebar" class="app-sidebar flex-column print-display-none" data-kt-drawer="true" data-kt-drawer-name="app-sidebar" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="225px" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_app_sidebar_mobile_toggle">
 
@@ -77,24 +90,18 @@
 
         <!--begin::Footer-->
         <div class="app-sidebar-footer flex-column-auto pt-2 pb-6 px-6" id="kt_app_sidebar_footer">
-            <form action="#" onclick="this.submit()" method="POST" class="btn btn-flex flex-center btn-custom btn-primary overflow-hidden text-nowrap px-0 h-40px w-100" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss-="click">
-                <span class="btn-label">
-                    Log Out
-                </span>
-                <i class="far fa-sign-out-alt btn-icon fs-4 m-0"></i>
+            <form method="POST" 
+                data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" 
+                @submit.prevent="authStore.logout" title="Logout">
+                <button class="btn btn-danger w-100">
+                    <i class="ki-solid ki-exit-right fs-4">
+                    </i>
+                </button>
+
             </form>
         </div>
+        <!--end::Footer-->
         <!--end::Footer-->
     </div>
 
 </template>
-
-<script setup>
-import { useRoute } from 'vue-router';
-
-const route = useRoute();
-
-const isActive = (name) => {
-    return route.name === name;
-};
-</script>

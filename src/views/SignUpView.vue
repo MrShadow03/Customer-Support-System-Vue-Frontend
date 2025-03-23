@@ -13,12 +13,11 @@
         password: '',
         password_confirmation: ''
     });
-
 </script>
 
 <template>
     <!--begin::Form-->
-    <form @submit.prevent="authenticate('register', form)" class="form w-100" novalidate="novalidate" id="kt_sign_in_form" action="#">
+    <form @submit.prevent="authenticate('register', form)" class="form w-100" novalidate="novalidate" action="#">
         <!--begin::Heading-->
         <div class="text-center mb-11">
             <img class="w-150px mb-5" alt="Logo" :src="logo" style="width: 150px; aspect-ratio: 1; object-fit:contain">
@@ -85,7 +84,7 @@
     
         <!--begin::Submit button-->
         <div class="d-grid mb-10 mt-10">
-            <button type="submit" id="kt_sign_in_submit" class="btn btn-primary">
+            <button type="submit" id="submit-button" class="btn btn-primary">
                 
                 <!--begin::Indicator label-->
                 <span class="indicator-label">

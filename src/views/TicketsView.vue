@@ -516,7 +516,7 @@
               <!--begin::Modal body-->
               <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
                 <!--begin:Form-->
-                <form id="kt_modal_new_ticket_form" class="form fv-plugins-bootstrap5 fv-plugins-framework" action="#">
+                <form id="kt_modal_new_ticket_form" class="form" action="#">
                   <!--begin::Heading-->
                   <div class="mb-13 text-center">
                     <!--begin::Title-->
@@ -532,18 +532,17 @@
                   <!--end::Heading-->
 
                   <!--begin::Input group-->
-                  <div class="d-flex flex-column mb-8 fv-row fv-plugins-icon-container">
+                  <div class="d-flex flex-column mb-8 fv-row">
                     <!--begin::Label-->
                     <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
                       <span class="required">Subject</span>
 
-                      <span class="ms-2" data-bs-toggle="tooltip" aria-label="Specify a subject for your issue" data-bs-original-title="Specify a subject for your issue" data-kt-initialized="1">
+                      <span class="ms-2" data-bs-toggle="tooltip" title="Specify a subject for your issue">
                         <i class="ki-duotone ki-information fs-7"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i> </span>
                     </label>
                     <!--end::Label-->
 
-                    <input type="text" class="form-control form-control-solid" placeholder="Enter your ticket subject" name="subject">
-                    <div class="fv-plugins-message-container invalid-feedback"></div>
+                    <input type="text" class="form-control form-control-solid" placeholder="Enter your ticket subject" name="subject" />
                   </div>
                   <!--end::Input group-->
 
@@ -551,35 +550,27 @@
                   <div class="row g-9 mb-8">
                     <!--begin::Col-->
                     <div class="col-md-6 fv-row">
-                      <label class="required fs-6 fw-semibold mb-2">Product</label>
+                      <label class="required fs-6 fw-semibold mb-2">Category</label>
 
-                      <select class="form-select form-select-solid select2-hidden-accessible" data-control="select2" data-hide-search="true" data-placeholder="Select a product" name="product" data-select2-id="select2-data-10-qm0r" tabindex="-1" aria-hidden="true" data-kt-initialized="1">
-                        <option value="" data-select2-id="select2-data-12-6tf0">Select a product...</option>
-                        <option value="1">HTML Theme</option>
-                        <option value="1">Angular App</option>
-                        <option value="1">Vue App</option>
-                        <option value="1">React Theme</option>
-                        <option value="1">Figma UI Kit</option>
-                        <option value="3">Laravel App</option>
-                        <option value="4">Blazor App</option>
-                        <option value="5">Django App</option>
-                      </select><span class="select2 select2-container select2-container--bootstrap5" dir="ltr" data-select2-id="select2-data-11-jjxs" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single form-select form-select-solid" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-product-iu-container" aria-controls="select2-product-iu-container"><span class="select2-selection__rendered" id="select2-product-iu-container" role="textbox" aria-readonly="true" title="Select a product"><span class="select2-selection__placeholder">Select a product</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                      <select class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Select a category" name="category">
+                        <option value="">Select a category...</option>
+                        <option value="Technical">Technical</option>
+                        <option value="Billing">Billing</option>
+                        <option value="General">General</option>
+                      </select>
                     </div>
                     <!--end::Col-->
 
                     <!--begin::Col-->
-                    <div class="col-md-6 fv-row fv-plugins-icon-container">
-                      <label class="required fs-6 fw-semibold mb-2">Assign</label>
+                    <div class="col-md-6 fv-row">
+                      <label class="required fs-6 fw-semibold mb-2">Priority</label>
 
-                      <select class="form-select form-select-solid select2-hidden-accessible" data-control="select2" data-hide-search="true" data-placeholder="Select a Team Member" name="user" data-select2-id="select2-data-13-d3yp" tabindex="-1" aria-hidden="true" data-kt-initialized="1">
-                        <option value="" data-select2-id="select2-data-15-rwvb">Select a user...</option>
-                        <option value="1">Karina Clark</option>
-                        <option value="2">Robert Doe</option>
-                        <option value="3">Niel Owen</option>
-                        <option value="4">Olivia Wild</option>
-                        <option value="5">Sean Bean</option>
-                      </select><span class="select2 select2-container select2-container--bootstrap5" dir="ltr" data-select2-id="select2-data-14-gf4h" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single form-select form-select-solid" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-user-h5-container" aria-controls="select2-user-h5-container"><span class="select2-selection__rendered" id="select2-user-h5-container" role="textbox" aria-readonly="true" title="Select a Team Member"><span class="select2-selection__placeholder">Select a Team Member</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                      <div class="fv-plugins-message-container invalid-feedback"></div>
+                      <select class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Is it urgent?" name="priority">
+                        <option value="">Select priority...</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                      </select>
                     </div>
                     <!--end::Col-->
                   </div>
@@ -591,18 +582,18 @@
                     <div class="col-md-6 fv-row">
                       <label class="required fs-6 fw-semibold mb-2">Status</label>
 
-                      <select class="form-select form-select-solid select2-hidden-accessible" data-control="select2" data-placeholder="Open" data-hide-search="true" data-select2-id="select2-data-16-ydqd" tabindex="-1" aria-hidden="true" data-kt-initialized="1">
+                      <select class="form-select form-select-solid" data-control="select2" data-placeholder="Open" data-hide-search="true">
                         <option value=""></option>
-                        <option value="1" selected data-select2-id="select2-data-18-kvbl">Open</option>
+                        <option value="1" selected>Open</option>
                         <option value="2">Pending</option>
                         <option value="3">Resolved</option>
                         <option value="3">Closed</option>
-                      </select><span class="select2 select2-container select2-container--bootstrap5" dir="ltr" data-select2-id="select2-data-17-r4te" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single form-select form-select-solid" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-9gzf-container" aria-controls="select2-9gzf-container"><span class="select2-selection__rendered" id="select2-9gzf-container" role="textbox" aria-readonly="true" title="Open">Open</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                      </select>
                     </div>
                     <!--end::Col-->
 
                     <!--begin::Col-->
-                    <div class="col-md-6 fv-row fv-plugins-icon-container">
+                    <div class="col-md-6 fv-row">
                       <label class="required fs-6 fw-semibold mb-2">Due Date</label>
 
                       <!--begin::Input-->
@@ -615,22 +606,20 @@
                         <!--end::Icon-->
 
                         <!--begin::Datepicker-->
-                        <input class="form-control form-control-solid ps-12 flatpickr-input" placeholder="Select a date" name="due_date" type="text" readonly>
+                        <input class="form-control form-control-solid ps-12" placeholder="Select a date" name="due_date" />
                         <!--end::Datepicker-->
                       </div>
                       <!--end::Input-->
-                      <div class="fv-plugins-message-container invalid-feedback"></div>
                     </div>
                     <!--end::Col-->
                   </div>
                   <!--end::Input group-->
 
                   <!--begin::Input group-->
-                  <div class="d-flex flex-column mb-8 fv-row fv-plugins-icon-container">
+                  <div class="d-flex flex-column mb-8 fv-row">
                     <label class="fs-6 fw-semibold mb-2">Description</label>
 
-                    <textarea class="form-control form-control-solid" rows="4" name="description" placeholder="Type your ticket description">                        </textarea>
-                    <div class="fv-plugins-message-container invalid-feedback"></div>
+                    <textarea class="form-control form-control-solid" rows="4" name="description" placeholder="Please tell us about your issue"></textarea>
                   </div>
                   <!--end::Input group-->
 
@@ -639,7 +628,7 @@
                     <label class="fs-6 fw-semibold mb-2">Attachments</label>
 
                     <!--begin::Dropzone-->
-                    <div class="dropzone dz-clickable" id="kt_modal_create_ticket_attachments">
+                    <div class="dropzone" id="kt_modal_create_ticket_attachments">
                       <!--begin::Message-->
                       <div class="dz-message needsclick align-items-center">
                         <!--begin::Icon-->
@@ -654,47 +643,6 @@
                       </div>
                     </div>
                     <!--end::Dropzone-->
-                  </div>
-                  <!--end::Input group-->
-
-                  <!--begin::Input group-->
-                  <div class="mb-15 fv-row fv-plugins-icon-container">
-                    <!--begin::Wrapper-->
-                    <div class="d-flex flex-stack">
-                      <!--begin::Label-->
-                      <div class="fw-semibold me-5">
-                        <label class="fs-6">Notifications</label>
-
-                        <div class="fs-7 text-gray-400">Allow Notifications by Phone or Email</div>
-                      </div>
-                      <!--end::Label-->
-
-                      <!--begin::Checkboxes-->
-                      <div class="d-flex align-items-center">
-                        <!--begin::Checkbox-->
-                        <label class="form-check form-check-custom form-check-solid me-10">
-                          <input class="form-check-input h-20px w-20px" type="checkbox" name="notifications[]" value="email" checked>
-
-                          <span class="form-check-label fw-semibold">
-                            Email
-                          </span>
-                        </label>
-                        <!--end::Checkbox-->
-
-                        <!--begin::Checkbox-->
-                        <label class="form-check form-check-custom form-check-solid">
-                          <input class="form-check-input h-20px w-20px" type="checkbox" name="notifications[]" value="phone">
-
-                          <span class="form-check-label fw-semibold">
-                            Phone
-                          </span>
-                        </label>
-                        <!--end::Checkbox-->
-                      </div>
-                      <!--end::Checkboxes-->
-                    </div>
-                    <!--end::Wrapper-->
-                    <div class="fv-plugins-message-container invalid-feedback"></div>
                   </div>
                   <!--end::Input group-->
 
