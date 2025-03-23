@@ -34,7 +34,7 @@
           <!--begin::Filter menu-->
           <div class="m-0">
             <!--begin::Menu toggle-->
-            <a href="#" class="btn btn-sm btn-flex bg-body btn-color-gray-700 btn-active-color-primary fw-bold" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+            <a href="#" class="btn btn-sm btn-flex bg-body btn-color-gray-700 btn-active-color-warning fw-bold" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
               <i class="ki-duotone ki-filter fs-6 text-muted me-1"><span class="path1"></span><span class="path2"></span></i>
               Filter
             </a>
@@ -125,9 +125,9 @@
 
                 <!--begin::Actions-->
                 <div class="d-flex justify-content-end">
-                  <button type="reset" class="btn btn-sm btn-light btn-active-light-primary me-2" data-kt-menu-dismiss="true">Reset</button>
+                  <button type="reset" class="btn btn-sm btn-light btn-active-light-warning me-2" data-kt-menu-dismiss="true">Reset</button>
 
-                  <button type="submit" class="btn btn-sm btn-primary" data-kt-menu-dismiss="true">Apply</button>
+                  <button type="submit" class="btn btn-sm btn-warning" data-kt-menu-dismiss="true">Apply</button>
                 </div>
                 <!--end::Actions-->
               </div>
@@ -141,9 +141,9 @@
           <!--begin::Secondary button-->
           <!--end::Secondary button-->
 
-          <!--begin::Primary button-->
-          <a href="#" data-bs-toggle="modal" data-bs-target="#kt_modal_new_ticket" class="btn btn-primary fw-bold fs-8 fs-lg-base">Create Ticket</a>
-          <!--end::Primary button-->
+          <!--begin::warning button-->
+          <a href="#" data-bs-toggle="modal" data-bs-target="#kt_modal_new_ticket" class="btn btn-warning fw-bold fs-8 fs-lg-base">Create Ticket</a>
+          <!--end::warning button-->
         </div>
         <!--end::Actions-->
       </div>
@@ -175,7 +175,7 @@
                   <form method="post" action="#" class="form mb-15">
                     <!--begin::Input wrapper-->
                     <div class="position-relative">
-                      <i class="ki-duotone ki-magnifier fs-1 text-primary position-absolute top-50 translate-middle ms-9"><span class="path1"></span><span class="path2"></span></i>
+                      <i class="ki-duotone ki-magnifier fs-1 text-warning position-absolute top-50 translate-middle ms-9"><span class="path1"></span><span class="path2"></span></i>
                       <input type="text" class="form-control form-control-lg form-control-solid ps-14" name="search" value="" placeholder="Search">
                     </div>
                     <!--end::Input wrapper-->
@@ -195,7 +195,7 @@
                         <!--begin::Content-->
                         <div class="d-flex align-items-center mb-2">
                           <!--begin::Title-->
-                          <RouterLink :to="{ name: 'ticket.show', params: { id: 32 } }" class="text-dark text-hover-primary fs-4 me-3 fw-semibold">How to use Netronic with Django Framework?</RouterLink>
+                          <RouterLink :to="{ name: 'ticket.show', params: { id: 32 } }" class="text-dark text-hover-warning fs-4 me-3 fw-semibold">How to use Netronic with Django Framework?</RouterLink>
                           <!--end::Title-->
 
                           <span class="badge badge-light my-1">Finance ERP</span>
@@ -244,7 +244,7 @@
 
 
                 <!--begin::More channels-->
-                <div class="card-rounded bg-primary bg-opacity-5 p-10 mb-15">
+                <div class="card-rounded bg-warning bg-opacity-5 p-10 mb-15">
                   <!--begin::Title-->
                   <h2 class="text-dark fw-bold mb-11">More Channels</h2>
                   <!--end::Title-->
@@ -252,7 +252,7 @@
                   <!--begin::Item-->
                   <div class="d-flex align-items-center mb-10">
                     <!--begin::Icon-->
-                    <i class="ki-duotone ki-calendar fs-1 text-primary me-5"><span class="path1"></span><span class="path2"></span></i>
+                    <i class="ki-duotone ki-calendar fs-1 text-warning me-5"><span class="path1"></span><span class="path2"></span></i>
                     <!--end::Icon-->
 
                     <!--begin::Info-->
@@ -266,7 +266,7 @@
                         <!--end::Desc-->
 
                         <!--begin::Link-->
-                        <a href="#" class="link-primary">Support Policy</a>
+                        <a href="#" class="link-warning">Support Policy</a>
                         <!--end::Link-->
                       </div>
                       <!--end::Section-->
@@ -277,7 +277,7 @@
                   <!--begin::Item-->
                   <div class="d-flex align-items-center mb-10">
                     <!--begin::Icon-->
-                    <i class="ki-duotone ki-notification-status fs-1 text-primary me-5"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
+                    <i class="ki-duotone ki-notification-status fs-1 text-warning me-5"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i>
                     <!--end::Icon-->
 
                     <!--begin::Info-->
@@ -291,7 +291,7 @@
                         <!--end::Desc-->
 
                         <!--begin::Link-->
-                        <a href="#" class="link-primary">support@keenthemes.com</a>
+                        <a href="#" class="link-warning">support@keenthemes.com</a>
                         <!--end::Link-->
                       </div>
                       <!--end::Section-->
@@ -302,7 +302,7 @@
                   <!--begin::Item-->
                   <div class="d-flex align-items-center mb-10">
                     <!--begin::Icon-->
-                    <i class="ki-duotone ki-twitter fs-1 text-primary me-5"><span class="path1"></span><span class="path2"></span></i>
+                    <i class="ki-duotone ki-twitter fs-1 text-warning me-5"><span class="path1"></span><span class="path2"></span></i>
                     <!--end::Icon-->
 
                     <!--begin::Info-->
@@ -316,7 +316,7 @@
                         <!--end::Desc-->
 
                         <!--begin::Link-->
-                        <a href="#" class="link-primary">KeenThemes Twitter </a>
+                        <a href="#" class="link-warning">KeenThemes Twitter </a>
                         <!--end::Link-->
                       </div>
                       <!--end::Section-->
@@ -327,7 +327,7 @@
                   <!--begin::Item-->
                   <div class="d-flex align-items-center ">
                     <!--begin::Icon-->
-                    <i class="ki-duotone ki-github fs-1 text-primary me-5"><span class="path1"></span><span class="path2"></span></i>
+                    <i class="ki-duotone ki-github fs-1 text-warning me-5"><span class="path1"></span><span class="path2"></span></i>
                     <!--end::Icon-->
 
                     <!--begin::Info-->
@@ -341,7 +341,7 @@
                         <!--end::Desc-->
 
                         <!--begin::Link-->
-                        <a href="#" class="link-primary">KeenThemes Github</a>
+                        <a href="#" class="link-warning">KeenThemes Github</a>
                         <!--end::Link-->
                       </div>
                       <!--end::Section-->
@@ -357,7 +357,7 @@
 
 
                 <!--begin::Documentations-->
-                <div class="card-rounded bg-primary bg-opacity-5 p-10 mb-15">
+                <div class="card-rounded bg-warning bg-opacity-5 p-10 mb-15">
                   <!--begin::Title-->
                   <h1 class="fw-bold text-dark mb-9">
                     Documentation
@@ -371,7 +371,7 @@
                     <!--end::Icon-->
 
                     <!--begin::Subtitle-->
-                    <a href="#" class="fw-semibold text-gray-800 text-hover-primary fs-5 m-0">
+                    <a href="#" class="fw-semibold text-gray-800 text-hover-warning fs-5 m-0">
                       Angular Admin </a>
                     <!--end::Subtitle-->
                   </div>
@@ -383,7 +383,7 @@
                     <!--end::Icon-->
 
                     <!--begin::Subtitle-->
-                    <a href="#" class="fw-semibold text-gray-800 text-hover-primary fs-5 m-0">
+                    <a href="#" class="fw-semibold text-gray-800 text-hover-warning fs-5 m-0">
                       React Admin </a>
                     <!--end::Subtitle-->
                   </div>
@@ -395,7 +395,7 @@
                     <!--end::Icon-->
 
                     <!--begin::Subtitle-->
-                    <a href="#" class="fw-semibold text-gray-800 text-hover-primary fs-5 m-0">
+                    <a href="#" class="fw-semibold text-gray-800 text-hover-warning fs-5 m-0">
                       Vue Dashboard </a>
                     <!--end::Subtitle-->
                   </div>
@@ -407,7 +407,7 @@
                     <!--end::Icon-->
 
                     <!--begin::Subtitle-->
-                    <a href="#" class="fw-semibold text-gray-800 text-hover-primary fs-5 m-0">
+                    <a href="#" class="fw-semibold text-gray-800 text-hover-warning fs-5 m-0">
                       Niche Theme </a>
                     <!--end::Subtitle-->
                   </div>
@@ -419,7 +419,7 @@
                     <!--end::Icon-->
 
                     <!--begin::Subtitle-->
-                    <a href="#" class="fw-semibold text-gray-800 text-hover-primary fs-5 m-0">
+                    <a href="#" class="fw-semibold text-gray-800 text-hover-warning fs-5 m-0">
                       Dashboard Admin </a>
                     <!--end::Subtitle-->
                   </div>
@@ -431,7 +431,7 @@
                     <!--end::Icon-->
 
                     <!--begin::Subtitle-->
-                    <a href="#" class="fw-semibold text-gray-800 text-hover-primary fs-5 m-0">
+                    <a href="#" class="fw-semibold text-gray-800 text-hover-warning fs-5 m-0">
                       Dorsey Front-end </a>
                     <!--end::Subtitle-->
                   </div>
@@ -443,7 +443,7 @@
                     <!--end::Icon-->
 
                     <!--begin::Subtitle-->
-                    <a href="#" class="fw-semibold text-gray-800 text-hover-primary fs-5 m-0">
+                    <a href="#" class="fw-semibold text-gray-800 text-hover-warning fs-5 m-0">
                       CRM Admin </a>
                     <!--end::Subtitle-->
                   </div>
@@ -455,7 +455,7 @@
                     <!--end::Icon-->
 
                     <!--begin::Subtitle-->
-                    <a href="#" class="fw-semibold text-gray-800 text-hover-primary fs-5 m-0">
+                    <a href="#" class="fw-semibold text-gray-800 text-hover-warning fs-5 m-0">
                       Admin Dashbaord </a>
                     <!--end::Subtitle-->
                   </div>
@@ -467,7 +467,7 @@
                     <!--end::Icon-->
 
                     <!--begin::Subtitle-->
-                    <a href="#" class="fw-semibold text-gray-800 text-hover-primary fs-5 m-0">
+                    <a href="#" class="fw-semibold text-gray-800 text-hover-warning fs-5 m-0">
                       Intranet Admin </a>
                     <!--end::Subtitle-->
                   </div>
@@ -506,7 +506,7 @@
               <!--begin::Modal header-->
               <div class="modal-header pb-0 border-0 justify-content-end">
                 <!--begin::Close-->
-                <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                <div class="btn btn-sm btn-icon btn-active-color-warning" data-bs-dismiss="modal">
                   <i class="ki-duotone ki-cross fs-1"><span class="path1"></span><span class="path2"></span></i>
                 </div>
                 <!--end::Close-->
@@ -525,7 +525,7 @@
 
                     <!--begin::Description-->
                     <div class="text-gray-400 fw-semibold fs-5">
-                      If you need more info, please check <a href="#" class="fw-bold link-primary">Support Guidelines</a>.
+                      If you need more info, please check <a href="#" class="fw-bold link-warning">Support Guidelines</a>.
                     </div>
                     <!--end::Description-->
                   </div>
@@ -577,45 +577,6 @@
                   <!--end::Input group-->
 
                   <!--begin::Input group-->
-                  <div class="row g-9 mb-8">
-                    <!--begin::Col-->
-                    <div class="col-md-6 fv-row">
-                      <label class="required fs-6 fw-semibold mb-2">Status</label>
-
-                      <select class="form-select form-select-solid" data-control="select2" data-placeholder="Open" data-hide-search="true">
-                        <option value=""></option>
-                        <option value="1" selected>Open</option>
-                        <option value="2">Pending</option>
-                        <option value="3">Resolved</option>
-                        <option value="3">Closed</option>
-                      </select>
-                    </div>
-                    <!--end::Col-->
-
-                    <!--begin::Col-->
-                    <div class="col-md-6 fv-row">
-                      <label class="required fs-6 fw-semibold mb-2">Due Date</label>
-
-                      <!--begin::Input-->
-                      <div class="position-relative d-flex align-items-center">
-                        <!--begin::Icon-->
-                        <div class="symbol symbol-20px me-4 position-absolute ms-4">
-                          <span class="symbol-label bg-secondary">
-                            <i class="ki-duotone ki-element-11"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></i> </span>
-                        </div>
-                        <!--end::Icon-->
-
-                        <!--begin::Datepicker-->
-                        <input class="form-control form-control-solid ps-12" placeholder="Select a date" name="due_date" />
-                        <!--end::Datepicker-->
-                      </div>
-                      <!--end::Input-->
-                    </div>
-                    <!--end::Col-->
-                  </div>
-                  <!--end::Input group-->
-
-                  <!--begin::Input group-->
                   <div class="d-flex flex-column mb-8 fv-row">
                     <label class="fs-6 fw-semibold mb-2">Description</label>
 
@@ -624,25 +585,16 @@
                   <!--end::Input group-->
 
                   <!--begin::Input group-->
-                  <div class="fv-row mb-8">
-                    <label class="fs-6 fw-semibold mb-2">Attachments</label>
+                  <div class="d-flex flex-column mb-8 fv-row">
+                    <!--begin::Label-->
+                    <label class="d-flex align-items-center fs-6 fw-semibold mb-2">
+                      <span>Attachment</span>
 
-                    <!--begin::Dropzone-->
-                    <div class="dropzone" id="kt_modal_create_ticket_attachments">
-                      <!--begin::Message-->
-                      <div class="dz-message needsclick align-items-center">
-                        <!--begin::Icon-->
-                        <i class="ki-duotone ki-file-up fs-3hx text-primary"><span class="path1"></span><span class="path2"></span></i> <!--end::Icon-->
+                      <span class="ms-2" data-bs-toggle="tooltip" title="Specify a subject for your issue"></span>
+                    </label>
+                    <!--end::Label-->
 
-                        <!--begin::Info-->
-                        <div class="ms-4">
-                          <h3 class="fs-5 fw-bold text-gray-900 mb-1">Drop files here or click to upload.</h3>
-                          <span class="fw-semibold fs-7 text-gray-400">Upload up to 10 files</span>
-                        </div>
-                        <!--end::Info-->
-                      </div>
-                    </div>
-                    <!--end::Dropzone-->
+                    <input type="file" class="form-control form-control-solid" placeholder="Enter your ticket subject" name="attachment" />
                   </div>
                   <!--end::Input group-->
 
@@ -652,7 +604,7 @@
                       Cancel
                     </button>
 
-                    <button type="submit" id="kt_modal_new_ticket_submit" class="btn btn-primary">
+                    <button type="submit" id="kt_modal_new_ticket_submit" class="btn btn-warning">
                       <span class="indicator-label">
                         Submit
                       </span>

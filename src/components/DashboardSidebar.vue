@@ -1,6 +1,7 @@
 <script setup>
 import { useAuthStore } from '@/stores/auth';
 import { useRoute } from 'vue-router';
+import logo from '@/assets/images/logo.png';
 
 const route = useRoute();
 
@@ -18,8 +19,8 @@ const authStore = useAuthStore();
         <div class="app-sidebar-logo px-6" id="kt_app_sidebar_logo">
             <!--begin::Logo image-->
             <a href="#" class="d-flex mt-3">
-                <img alt="Logo" src="https://i.pravatar.cc/40" class="h-40px app-sidebar-logo-default">
-                <img alt="Logo" src="https://i.pravatar.cc/40" class="h-40px app-sidebar-logo-minimize">
+                <img alt="Logo" :src="logo" class="h-40px app-sidebar-logo-default">
+                <img alt="Logo" :src="logo" class="h-40px app-sidebar-logo-minimize">
             </a>
             <!--end::Logo image-->
             <!--begin::Sidebar toggle-->
@@ -56,13 +57,30 @@ const authStore = useAuthStore();
                                     <span class="path4"></span>
                                 </i>
                             </span>
-                            <span class="menu-title">Tickets</span>
+                            <span class="menu-title">My Tickets</span>
                         </RouterLink>
                         <!--end:Menu link-->
                     </div>
                     <!--end:Menu item-->
                     <!--begin:Menu item-->
-                    <div class="menu-item">
+                    <div class="menu-item" v-if="authStore.user.roles[0].name === 'admin'">
+                        <!--begin:Menu link-->
+                        <RouterLink class="menu-link" :to="{ name: 'tickets' }" :class="{ 'active': isActive('tickets') }">
+                            <span class="menu-icon">
+                                <i class="ki-duotone ki-note-2 fs-2">
+                                    <span class="path1"></span>
+                                    <span class="path2"></span>
+                                    <span class="path3"></span>
+                                    <span class="path4"></span>
+                                </i>
+                            </span>
+                            <span class="menu-title">All Tickets</span>
+                        </RouterLink>
+                        <!--end:Menu link-->
+                    </div>
+                    <!--end:Menu item-->
+                    <!--begin:Menu item-->
+                    <div class="menu-item" v-if="authStore.user.roles[0].name === 'admin'">
                         <!--begin:Menu link-->
                         <RouterLink class="menu-link" :to="{ name: 'chats' }" :class="{ 'active': isActive('chats') }">
                             <span class="menu-icon">
@@ -94,10 +112,8 @@ const authStore = useAuthStore();
                 data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" 
                 @submit.prevent="authStore.logout" title="Logout">
                 <button class="btn btn-danger w-100">
-                    <i class="ki-solid ki-exit-right fs-4">
-                    </i>
+                    <span class="text-white fs-6">Logout</span>
                 </button>
-
             </form>
         </div>
         <!--end::Footer-->

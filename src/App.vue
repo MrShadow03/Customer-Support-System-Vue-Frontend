@@ -15,10 +15,6 @@ const layout = computed(() => {
 
 const authStore = useAuthStore();
 
-onMounted(() => {
-    authStore.getUser();
-});
-
 </script>
 
 <template>

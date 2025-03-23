@@ -2,7 +2,8 @@
     import { useAuthStore } from '@/stores/auth';
     import { storeToRefs } from 'pinia';
     import { reactive } from 'vue';
-    import logo from '@/assets/images/logo.jpg';
+    import logo from '@/assets/images/logo.png';
+    import { onMounted } from 'vue';
 
     const { authenticate } = useAuthStore();
     const { errors } = storeToRefs(useAuthStore());
@@ -13,6 +14,13 @@
         password: '',
         password_confirmation: ''
     });
+    onMounted(() => {
+        form.name = '';
+        form.email = '';
+        form.password = '';
+        form.password_confirmation = '';
+        errors.value = {};
+    });
 </script>
 
 <template>
@@ -20,10 +28,10 @@
     <form @submit.prevent="authenticate('register', form)" class="form w-100" novalidate="novalidate" action="#">
         <!--begin::Heading-->
         <div class="text-center mb-11">
-            <img class="w-150px mb-5" alt="Logo" :src="logo" style="width: 150px; aspect-ratio: 1; object-fit:contain">
+            <img class=" mb-5" alt="Logo" :src="logo" style="width: 250px; object-fit:contain">
     
             <!--begin::Subtitle-->
-            <div class="text-gray-500 fw-semibold fs-6">
+            <div class="text-gray-500 fw-semibold fs-6 mt-4">
                 Sign Up to Customer Support System
             </div>
             <!--end::Subtitle--->
@@ -84,7 +92,7 @@
     
         <!--begin::Submit button-->
         <div class="d-grid mb-10 mt-10">
-            <button type="submit" id="submit-button" class="btn btn-primary">
+            <button type="submit" id="submit-button" class="btn btn-warning">
                 
                 <!--begin::Indicator label-->
                 <span class="indicator-label">
@@ -106,7 +114,7 @@
         <div class="text-gray-500 text-center fw-semibold fs-6">
             Already have an account?
     
-            <RouterLink :to="{name: 'login'}" class="link-primary fw-bolder">
+            <RouterLink :to="{name: 'login'}" class="link-warning fw-bolder">
                 Login
             </RouterLink>
         </div>
