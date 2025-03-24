@@ -87,6 +87,14 @@ export const useTicketsStore = defineStore('ticketsStore', {
             const data = await response.json();
             this.chatMessages = data.data;
 
+            setTimeout(() => {
+                const messagesContainer = document.querySelector('[data-kt-element="messages"]');
+                if (messagesContainer) {
+                  messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                }
+              }, 100);
+
+            
             console.log(data);
         },
         async getAllTickets() {

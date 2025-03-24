@@ -6,6 +6,17 @@ import { onMounted, reactive, ref } from 'vue';
 import { useRoute } from 'vue-router';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
+import echo from '@/echo';
+
+
+const scrollToBottom = () => {
+  setTimeout(() => {
+    const messagesContainer = document.querySelector('[data-kt-element="messages"]');
+    if (messagesContainer) {
+      messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+  }, 100);
+};
 
 const route = useRoute();
 const ticketsStore = useTicketsStore();
@@ -312,7 +323,7 @@ const role = authStore.user.roles[0].name;
                       <!--begin:Toolbar-->
                       <div class="d-flex flex-stack">
                         <!--begin::Send-->
-                        <button class="btn btn-primary" type="submit" data-kt-element="send">Send</button>
+                        <button class="btn btn-primary" type="submit" data-kt-element="send" @click="scrollToBottom">Send</button>
                         <!--end::Send-->
                       </div>
                       <!--end::Toolbar-->

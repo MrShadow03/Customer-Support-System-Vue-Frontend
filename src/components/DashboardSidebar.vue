@@ -79,26 +79,6 @@ const authStore = useAuthStore();
                         <!--end:Menu link-->
                     </div>
                     <!--end:Menu item-->
-                    <!--begin:Menu item-->
-                    <div class="menu-item" v-if="authStore.user.roles[0].name === 'admin'">
-                        <!--begin:Menu link-->
-                        <RouterLink class="menu-link" :to="{ name: 'chats' }" :class="{ 'active': isActive('chats') }">
-                            <span class="menu-icon">
-                                <i class="ki-duotone ki-messages fs-2">
-                                    <span class="path1"></span>
-                                    <span class="path2"></span>
-                                    <span class="path3"></span>
-                                    <span class="path4"></span>
-                                    <span class="path5"></span>
-                                </i>
-                            </span>
-                            <span class="menu-title">
-                                Chats
-                            </span>
-                        </RouterLink>
-                        <!--end:Menu link-->
-                    </div>
-                    <!--end:Menu item-->
                 </div>
                 <!--end::Menu-->
             </div>
