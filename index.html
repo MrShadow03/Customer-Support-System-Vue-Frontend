@@ -9,7 +9,7 @@
     <link href="/assets/plugins/global/font-awesome.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css"/>
     <link href="/assets/css/style.bundle.css" rel="stylesheet" type="text/css"/>
-    <link href="/assets/" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css/custom.css" rel="stylesheet" type="text/css"/>
     <title>Customer Support System</title>
   </head>
   <body id="kt_app_body" data-kt-app-layout="dark-sidebar" data-kt-app-header-fixed="true" data-kt-app-sidebar-enabled="true" data-kt-app-sidebar-fixed="true" data-kt-app-sidebar-hoverable="true" data-kt-app-sidebar-push-header="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" data-kt-app-toolbar-enabled="true" data-kt-app-page-loading-enabled="true" data-kt-app-page-loading="on" class="app-default">
@@ -54,6 +54,26 @@
     <script src="/assets/js/custom/utilities/modals/upgrade-plan.js"></script>
     <script src="/assets/js/custom/utilities/modals/create-app.js"></script>
     <script src="/assets/js/custom/utilities/modals/users-search.js"></script>
+
+    <script>
+      toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toastr-top-center",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+      };
+    </script>
       <!--end::Javascript-->
   </body>
 </html>

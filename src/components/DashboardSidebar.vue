@@ -48,7 +48,7 @@ const authStore = useAuthStore();
                     <!--begin:Menu item-->
                     <div class="menu-item">
                         <!--begin:Menu link-->
-                        <RouterLink class="menu-link" :to="{ name: 'tickets' }" :class="{ 'active': isActive('tickets') }">
+                        <RouterLink class="menu-link" :to="{ name: 'tickets' }" :class="{ 'active': isActive('tickets') }" v-if="authStore.user.roles[0].name === 'customer'">
                             <span class="menu-icon">
                                 <i class="ki-duotone ki-note-2 fs-2">
                                     <span class="path1"></span>
